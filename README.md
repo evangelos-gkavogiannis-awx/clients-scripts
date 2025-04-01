@@ -12,6 +12,16 @@ This repository contains a collection of Node.js scripts designed to interact wi
 
 - Additional scripts will be added as the repository grows.
 
+## Prerequisites
+
+Before running any scripts, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- An IDE to open the repo after cloining it
+- Internet access (to reach the Airwallex API)
+- An Airwallex **API token** (demo or/and production)
+
+
 ## Getting Started
 
 1. **Clone the Repository:**
