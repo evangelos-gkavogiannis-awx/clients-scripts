@@ -4,11 +4,14 @@ This script fetches all beneficiaries from the Airwallex API and exports their k
 
 ---
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 1. **Add your Airwallex API access token**
 
-   Open `exportBeneficiaries.js` and replace the placeholder with your actual API token:
+   Open `exportBeneficiaries.js` and:
+   - replace the placeholder with your actual API token
+   - replace the demo url with the production one
 
-   ```js
-   const TOKEN = 'YOUR_API_TOKEN_HERE';
+
+Run the script with `node export-beneficiaries.js`
+A `beneficiaries.csv` will be created with the beneficiaries data
