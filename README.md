@@ -31,3 +31,6 @@ Before running any scripts, make sure you have the following installed:
    cd clients-scripts
    npm install
 
+2. **Read the corresponding README file of the script you want to run**
+
+
