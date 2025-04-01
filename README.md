@@ -17,7 +17,7 @@ This repository contains a collection of Node.js scripts designed to interact wi
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/airwallex-api-tools.git
-   cd airwallex-api-tools
+   git clone https://github.com/evangelos-gkavogiannis-awx/clients-scripts.git
+   cd clients-scripts
    npm install
 
