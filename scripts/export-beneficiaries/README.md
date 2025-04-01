@@ -12,6 +12,8 @@ This script fetches all beneficiaries from the Airwallex API and exports their k
    - replace the placeholder with your actual API token
    - replace the demo url with the production one
 
+To obtain the access token you need to call the [Obtain Access token endpoint](https://www.airwallex.com/docs/api#/Authentication/API_Access/_api_v1_authentication_login/post) using your API keys (webapp > Account > Developer > API keys)
+
 
 Run the script with `node export-beneficiaries.js`
 A `beneficiaries.csv` will be created with the beneficiaries data
