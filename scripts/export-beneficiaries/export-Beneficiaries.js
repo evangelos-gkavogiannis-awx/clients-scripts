@@ -3,7 +3,7 @@ const fs = require('fs');
 const { Parser } = require('json2csv');
 
 const API_URL = 'https://api-demo.airwallex.com/api/v1/beneficiaries'; //replace with prod url
-const TOKEN = 'your_access_token'; // Replace with your token
+const TOKEN = ''; // Replace with your token
 
 (async () => {
   try {
@@ -46,7 +46,7 @@ const TOKEN = 'your_access_token'; // Replace with your token
     });
 
     const parser = new Parser({
-      quote: '', // ⛔️ This disables quote wrapping
+      quote: '', // This disables quote wrapping
       delimiter: ',', // (optional) set custom delimiter
       header: true
     });
@@ -54,8 +54,8 @@ const TOKEN = 'your_access_token'; // Replace with your token
     const csv = parser.parse(records);
 
     fs.writeFileSync('beneficiaries.csv', csv, { encoding: 'utf8' });
-    console.log('✅ beneficiaries.csv created without quotes.');
+    console.log(' beneficiaries.csv created without quotes.');
   } catch (err) {
-    console.error('❌ Error:', err.response?.data || err.message);
+    console.error(' Error:', err.response?.data || err.message);
   }
 })();

@@ -3,7 +3,7 @@ const axios = require('axios');
 const csv = require('csv-parser');
 
 const API_URL = 'https://api-demo.airwallex.com/api/v1/beneficiaries/create';
-const TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoiY2xpZW50IiwiZGMiOiJISyIsImRhdGFfY2VudGVyX3JlZ2lvbiI6IkhLIiwiaXNzZGMiOiJVUyIsImp0aSI6IjYxMzgzZWU2LTQyMzEtNGEwNC05MWJjLTU0ODViM2VjYmRjZiIsInN1YiI6ImY5MjE5NTMwLTFhNzAtNDlkMy05ZjMzLTBlYzljNjBiNzlmMiIsImlhdCI6MTc0Mzc3ODU0MCwiZXhwIjoxNzQzNzgwMzQwLCJhY2NvdW50X2lkIjoiMjZjNmNmNGEtMWVhZC00YjM0LWI2MWEtNDEwNTE2ODBiZGU4IiwiYXBpX3ZlcnNpb24iOiIyMDI0LTA5LTI3IiwicGVybWlzc2lvbnMiOlsicjphd3g6KjoqIiwidzphd3g6KjoqIl19.SjguHiRQtPWQjAVhSGiLkfjvPuMDNWz59u7C9c83XBA'; // 🔁 Replace with your real token
+const TOKEN = ''; // 🔁 Replace with your real token
 
 const beneficiaries = [];
 
@@ -37,7 +37,7 @@ fs.createReadStream('create_beneficiary_data.csv')
     beneficiaries.push(payload);
   })
   .on('end', async () => {
-    console.log(`📄 Loaded ${beneficiaries.length} beneficiaries from CSV.`);
+    console.log(` Loaded ${beneficiaries.length} beneficiaries from CSV.`);
 
     for (const [index, payload] of beneficiaries.entries()) {
       try {
@@ -49,9 +49,9 @@ fs.createReadStream('create_beneficiary_data.csv')
           }
         });
 
-        console.log(`✅ [${index + 1}] Beneficiary created:`, response.data.id || response.data);
+        console.log(`[${index + 1}] Beneficiary created:`, response.data.id || response.data);
       } catch (error) {
-        console.error(`❌ [${index + 1}] Error creating beneficiary:`, error.response?.data || error.message);
+        console.error(`[${index + 1}] Error creating beneficiary:`, error.response?.data || error.message);
       }
     }
   });
