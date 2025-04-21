@@ -4,11 +4,14 @@ This repository contains a collection of Node.js scripts designed to interact wi
 
 ## What's Included
 
-- **export-Beneficiaries.js**  
+- **export-beneficiaries.js**  
   Fetches beneficiaries using the Airwallex GET /beneficiaries endpoint and exports key details to a CSV file.
 
-- **scripts/createBeneficiaries/**  
-  Contains tools to help create beneficiaries. See the README in the folder for usage details.
+- **create-beneficiaries.js**  
+  Script to create beneficiaries. See the README in the folder for usage details.
+
+- **create-cardholders.js**  
+  Script to create cardholders. See the README in the folder for usage details.
 
 - Additional scripts will be added as the repository grows.
 
